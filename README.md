@@ -7,6 +7,8 @@ It helps acquaintance with I3-wm, and saves a lot of time thanks to ready-made c
 The utility is written in Golang in conjunction with shell-scripts, which makes it fast and simple. Just "Keep It Simple, Stupid".
 I hope with this program I will help you understand the I3-WM window manager.
 
+Here are 2 versions of the utility: [CLI](#goapple-cli) and [GUI](#goapple-gui).
+
 ## DEPENDENCIES
 
 `make`
@@ -32,6 +34,8 @@ goapple
 
 ### GOAPPLE-CLI
 
+[SOURCE CODE](https://github.com/Avdushin/GOAPPLE-CLI/) 
+
 ![mm](src/assets/mm.jpg)
 
 ![dm](src/assets/dm.jpg)
@@ -42,6 +46,7 @@ goapple
 
 ### GOAPPLE-GUI
 
+[SOURCE CODE](https://github.com/Avdushin/GOAPPLE-GUI)
 
  * app's menu
 
