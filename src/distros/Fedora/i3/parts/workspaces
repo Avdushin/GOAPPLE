@@ -1,0 +1,100 @@
+#####################################################
+#                                                   #
+#   Assign applications to workspaces               #
+#   Setting the monitor(s) mode                     #
+#                                       #
+#                                                   #
+#####################################################
+
+#####################################################
+#         Setting the monitor(s) mode               #
+#####################################################
+
+exec --no-startup-id xrandr --output HDMI-0 --left-of DP-1-1 --auto
+
+set $firstMonitor HDMI-0
+set $secondMonitor DP-1-1
+
+
+# Выбор монитора рабочих для мест
+
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor    
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
+
+# перемещение на рабочие места                                                                                       
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
+
+#####################################################
+#         assign applications to workspaces         #
+#####################################################
+
+# Assign application to start on a specific workspace
+# you can find the class with the program xprop
+
+# Workspace 1 browser related
+#assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
+#assign [class="Chromium|Google-chrome"]                                             → 1
+
+# Workspace 2 text editor related
+
+#assign [class="sublime_text"]       → 2
+assign [class="Xed|xed|Brackets|sublime_text|Sublime_text|Code|code|code-oss"]                                   → 2
+
+# Workspace 3 Firefox
+assign [class="Brave|firefox|Google-chrome|google-chrome"]                                                           → 3
+
+# Workspace 4 freetube
+#assign [class="freetube"]                                                               → 4
+
+
+# Workspace 5 Images and meld
+#assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
+#assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
+#assign [class="Meld"]                                                               → 5
+
+# Workspace 6 all video related software
+assign [class="discord"]                                                            → 6
+
+# Workspace 7 virtual machines and settings
+assign [class="Telegram"]                           → 7
+
+# Workspace 8 file managers
+#assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
+
+# Workspace 9 email clients
+#assign [class="Geary|Evolution"]                                                    → 9
+
+# Workspace 10 music related
+#assign [class="Spotify|spotify"]                                                    → 10
+#fix for spotify not moving to workspace 10
+#for_window [class="Spotify"] move to workspace 10

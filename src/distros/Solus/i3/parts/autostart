@@ -1,0 +1,61 @@
+#####################################################
+#           АВТОСТАРТ ПРОГРАММ                      #
+#####################################################
+
+# раскладка клавиатуры
+exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant -option grp:alt_shift_toggle 
+
+# Autotiling
+exec_always --no-startup-id autotiling
+
+# Polybar панель
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
+
+# noisetorch - шумодав
+#exec_always --no-startup-id ~/.local/bin/noisetorch 
+
+# Приложения в трее ======================= #
+
+#Authentication dialog
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# сеть
+exec --no-startup-id nm-applet
+
+# индикатор num lock 
+exec_always --no-startup-id numlockx on
+
+# variety 
+exec --no-startup-id variety
+
+# bluetooth
+#exec --no-startup-id blueberry-tray
+
+# dropbox
+#exec --no-startup-id dropbox start
+
+# insync
+#exec --no-startup-id insync start
+
+# звук
+#exec --no-startup-id pasystray
+#exec --no-startup-id volumeicon
+
+#exec variety --set ~/walls/ananazz-true.jpg
+#exec variety --set ~/walls/pathologic-tragics.jpg
+
+# clipman
+#exec --no-startup-id xfce4-clipman
+
+# feh обои рабочего стола
+#exec --no-startup-id feh --bg-fill ~/walls/ananazz-true.jpg &
+
+#####################################################
+#       Системные приложения                        #
+#####################################################
+
+exec --no-startup-id xfce4-power-manager &
+# oMainMenuitted next line to get super key to bring up the menu in xfce and avoid error then in i3
+# IF xfsettingsd is activated you can not change themes
+#exec --no-startup-id xfsettingsd &
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &

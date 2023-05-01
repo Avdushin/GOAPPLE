@@ -1,0 +1,50 @@
+#####################
+#   Polybar Themes  #
+#####################
+
+[colors]
+; Nord theme ============
+background = #2F343F
+foreground = #f3f4f5
+alert = #d08770
+volume-min = #a3be8c
+volume-med = #ebcb8b
+volume-max = #bf616a
+; =======================
+
+; Solarized Dark =======
+;background = #073642
+;foreground = #f3f4f5
+; ======================
+
+; Solarized lighter =======
+;background = #004658
+;foreground = #f3f4f5
+; =========================
+
+; Solarized light =======
+;background = #FDF6E3
+;foreground = #073642
+
+; =========================
+
+; Gotham theme ==========
+;background = #0a0f14
+;foreground = #99d1ce
+; alert = #d26937
+; volume-min = #2aa889
+; volume-med = #edb443
+; volume-max = #c23127
+; =======================
+
+; INTRCPTR theme ============
+;background = ${xrdb:color0:#222}
+;background = #aa000000
+;background-alt = #444
+;foreground = ${xrdb:color7:#222}
+;foreground = #fff
+;foreground-alt = #555
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
+; ==========================

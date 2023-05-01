@@ -1,10 +1,10 @@
 # This file contains fish universal variable definitions.
-# VERSION: 3.0
+# Version: 3.0
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:586e75
 SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_command:93a1a1
-SETUVAR fish_color_comment:586e75
+SETUVAR fish_color_coMainMenuand:93a1a1
+SETUVAR fish_color_coMainMenuent:586e75
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:268bd2

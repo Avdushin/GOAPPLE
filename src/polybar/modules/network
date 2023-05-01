@@ -1,0 +1,191 @@
+#################################################
+#                Network Modules                #
+#################################################
+
+# network-publicip module
+[module/network-publicip]
+type = custom/script
+exec = ~/.config/polybar/scripts/network-publicip.sh
+interval = 5
+format-prefix = " " 
+format-prefix-foreground = #20a639
+format-background = 
+format-foreground = 
+format-underline = #6C6565
+
+# networkspeedup module 
+[module/networkspeedup]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp2s0
+;interface = enp14s0
+;interface = enp0s31f6
+;interface = enp4s0
+label-connected = "%upspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-foreground = #FE522C
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+;format-connected-underline = #62FF00
+
+
+# networkspeeddown module
+[module/networkspeeddown]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+;interface = wlp3s0
+;interface = enp14s0
+interface = wlp2s0
+;interface = enp4s0
+label-connected = "%downspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-foreground = #3EC13F
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+;format-connected-underline = #62FF00
+
+#  module
+[module/pub-ip]
+;https://linuxconfig.org/polybar-a-better-wm-panel-for-your-linux-system
+type = custom/script
+exec = ~/.config/polybar/scripts/pub-ip.sh
+interval = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-underline = #FFBB00
+label = %output%
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+
+#################################################
+#                   VPN                         #
+#################################################
+
+# vpnb module
+[module/vpnb]
+type = custom/script
+exec = ~/.config/polybar/scripts/service.sh
+interval = 1
+click-middle = ~/.config/polybar/scripts/service.sh toggle &
+click-left =  ~/.config/polybar/scripts/service.sh enable &
+click-right = ~/.config/polybar/scripts/service.sh disable &
+label = %output%
+format-background = 
+format-foreground = 
+
+#  is-vpn (windscribe) module
+[module/is-vpn]
+type = custom/script
+exec = ~/.config/polybar/scripts/is-vpn.sh
+interval = 2
+click-middle = ~/.config/polybar/scripts/is-vpn.sh toggle &
+click-left = windscribe connect
+click-right = windscribe disconnect
+format-prefix = "  "
+;  
+format-prefix-foreground = #256974
+label = %output%
+format-background = 
+format-foreground = 
+
+#  vpnz module
+[module/vpnz]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/vpn_module.sh
+click-left = $HOME/.config/polybar/polybar-vpn-controller/vpn_module.sh --toggle-connection &
+click-right = $HOME/.config/polybar/polybar-vpn-controller/vpn_module.sh --location-menu &
+click-middle = $HOME/.config/polybar/polybar-vpn-controller/vpn_module.sh --ip-address &
+interval = 1
+format = <label>
+format-background = 
+format-foreground = 
+
+#  vpn module
+[module/vpn]
+type = custom/script
+exec = ~/.config/polybar/scripts/pineapplevpn.sh
+interval = 1
+
+format-foreground = ${colors.foreground}
+format-background = 
+
+[module/wired-network]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp2s0
+;interface = enp14s0
+interval = 3.0
+
+; Available tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+; Default: %ifname% %local_ip%
+label-connected =  %ifname%
+label-disconnected = %ifname% disconnected
+
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = #55aa55
+format-connected-prefix-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/wireless-network]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+;label-connected = Network manager
+;label-connected = %{A1:gnome-terminal -e nmtui &:} %essid%%{A}
+;label-connected = %essid%
+label-connected = %signal%
+
+;format-connected = <label-connected>
+format-connected = <ramp-signal> 
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+;format-connected-prefix = "  "
+format-connected-prefix-foreground = #7e52c6
+format-connected-prefix-background = ${colors.background}
+format-connected-underline = #7e52c6
+
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.alert}
+label-disconnected-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-foreground = ${colors.alert}
+format-disconnected-background = ${colors.background}
+format-disconnected-prefix = "  "
+format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected-prefix-background = ${colors.background}
+format-disconnected-underline =${colors.alert}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
+ramp-signal-6 = 
+ramp-signal-7 = 
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+[module/network-networkmanager]
+type = custom/script
+exec = ~/.config/polybar/scripts/network-networkmanager.sh
+tail = true

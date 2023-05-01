@@ -1,0 +1,13 @@
+[module/variety]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #0084FF
+click-right = variety --preferences
+click-left = variety --selector

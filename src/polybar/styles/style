@@ -1,0 +1,42 @@
+##################
+# Styles Polybar #
+##################
+
+monitor = ${env:MONITOR}
+;monitor-fallback = HDMI1
+monitor-strict = false
+override-redirect = false
+bottom = false
+fixed-center = true
+width = 100%
+height = 30
+
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+radius = 15
+line-size = 2
+line-color = #000000
+
+;border-size = 5
+border-left-size = 10
+border-right-size = 10
+border-top-size = 5
+border-bottom-size = 0 
+border-color = 
+
+padding-left = 5
+padding-right = 5
+
+module-margin-left = 1
+module-margin-right = 1
+
+# Fonts
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = "Noto Sans:size=11;0"
+font-1 = "FontAwesome:size=11;0"
+font-2 = "Noto Sans:size=11;0"
+font-3 = "Noto Sans Mono:size=11;0"
+font-4 = "coins:style=Regular:size=8;0"
+font-6 = "unicode-emoji:size=11;0"

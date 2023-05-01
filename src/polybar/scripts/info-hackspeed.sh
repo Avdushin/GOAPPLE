@@ -44,7 +44,7 @@ xinput test "$KEYBOARD_ID" | \
 	stdbuf -o0 awk '$1 == "key" && $2 == "press" && ('"$CONDITION"') {printf "."}' >> "$hackspeed_cache" &
 
 while true; do
-	# Ask the kernel how big the file is with the command `stat`. The number we
+	# Ask the kernel how big the file is with the coMainMenuand `stat`. The number we
 	# get is the file size in bytes, which equals the amount of dots the file
 	# contains, and hence how much keys were pressed since the file was last
 	# cleared.

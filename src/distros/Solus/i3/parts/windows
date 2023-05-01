@@ -1,0 +1,213 @@
+#####################################################
+#                                                   #
+#   Reload changed configuration                    #
+#   Настройка цвета окна                            #
+#   Stopping an application                         #
+#   Logout menu                                     #
+#   Assign applications to workspaces               #
+#   Resize windows                                  #
+#   Плавающие и тайловые окна                       #
+#   Фокус приложений                                #
+#   Popups  control                                 #
+#   i3 gaps next                                    #
+#   i3 gaps change                                  #
+#                                                   #
+#####################################################
+
+#####################################################
+#           Настройка цвета окна                    #
+#####################################################
+# class                 обводка фон     текст   индикатор
+client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+client.unfocused        #222222 #222222 #aaaaaa #222222
+client.focused_inactive #222222 #222222 #a9a9a9 #222222
+client.placeholder      #222222 #222222 #aaaaaa #222222
+client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+client.background       #242424
+
+#####################################################
+#       Stopping an application                     #
+#####################################################
+
+# kill focused window
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+#####################################################
+#               LOGOUT MENU                         #
+#####################################################
+
+# lock
+bindsym Mod1+l exec i3lock -n --color=#033E4D
+
+#Backup exit
+#Press ctrl+alt+x - check toolbar for next choices
+#bindsym control+mod1+X mode "$mode_system"
+bindsym $mod+X mode "$mode_system"
+
+set $mode_system System (l) lock, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    #bindsym l exec i3lock -n --color=#0D3541
+    bindsym l exec i3lock -n --color=#033E4D
+    bindsym r exec reboot
+    bindsym s exec shutdown -h 0
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+#####################################################
+#               Resize                              #
+#####################################################
+# Resizing by 1
+bindsym $mod+Mod1+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Left resize grow width 1 px or 1 ppt
+#old resize keybindings
+# resize window (you can also use the mouse for that)
+
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+       bindsym $left       resize shrink width 10 px or 10 ppt
+       bindsym $down       resize grow height 10 px or 10 ppt
+       bindsym $up         resize shrink height 10 px or 10 ppt
+       bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+       bindsym Left        resize shrink width 10 px or 10 ppt
+       bindsym Down        resize grow height 10 px or 10 ppt
+       bindsym Up          resize shrink height 10 px or 10 ppt
+       bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+       bindsym Return mode "default"
+       bindsym Escape mode "default"
+}
+
+#####################################################
+#       Плавающие и тайловые окна                   #
+#####################################################
+
+#floating enabled from some programs - find with xprop
+
+for_window [class="gcolor3"] floating enable
+for_window [class="Arcolinux-calamares-tool.py"] floating enable
+for_window [class="Bleachbit"] floating disable
+for_window [class="Blueberry.py"] floating enable
+for_window [class="Brasero"] floating disable
+for_window [class="Galculator"] floating enable
+for_window [class="Gnome-disks"] floating disable
+for_window [class="^Gnome-font-viewer$"] floating enable
+for_window [class="^Gpick$"] floating enable
+for_window [class="Hexchat"] floating disable
+for_window [class="Imagewriter"] floating enable
+for_window [class="Font-manager"] floating enable
+#for_window [class="qt5ct|Lxappearance] floating enable
+for_window [class="Nitrogen"] floating disable
+for_window [class="Pavucontrol"] floating disable
+for_window [class="Peek"] floating enable
+for_window [class="^Skype$"] floating enable
+for_window [class="^Spotify$"] floating disable
+for_window [class="System-config-printer.py"] floating enable
+for_window [class="Unetbootin.elf"] floating enable
+for_window [class="Usb-creator-gtk"] floating enable
+for_window [class="^Vlc$"] floating disable
+for_window [class="Wine"] floating disable
+for_window [class="Xfburn"] floating disable
+for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="Xfce4-settings-manager"] floating disable
+for_window [class="Xfce4-taskmanager"] floating enable
+
+#for_window [instance="gimp"] floating disable
+for_window [instance="script-fu"] border normal
+for_window [instance="variety"] floating disable
+
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
+for_window [title="Moving"] floating enable
+for_window [title="^Terminator Preferences$"] floating enable
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="^Preferences$"] floating enable
+for_window [window_role="setup"] floating enable
+
+#####################################################
+#                   Фокус приложений                #
+#####################################################
+
+for_window [class="Kitty"] focus
+for_window [class="Termite"] focus
+for_window [class="Terminator"] focus
+
+#####################################################
+#               Popups  control                     #
+#####################################################
+
+#Popups during fullscreen mode
+popup_during_fullscreen smart
+
+#####################################################
+#               i3 gaps next                        #
+#####################################################
+
+# Settings for I3 next gap git
+# https://github.com/Airblader/i3/tree/gaps-next
+# delete or uncoMainMenuent the following lines if you do not have it or do not
+# want it
+
+for_window [class="^.*"] border pixel 0
+gaps inner 8
+gaps outer 1
+#smart_gaps on
+#smart_borders on
+
+#####################################################
+#               i3 gaps change                      #
+#####################################################
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}

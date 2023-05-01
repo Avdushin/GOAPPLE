@@ -1,0 +1,50 @@
+#####################################################
+#                                                   #
+#                  Шрифты                           #
+#                  Контроль обводки                 #
+#                  picom of i3wm                    #
+#                                                   #
+#####################################################
+
+#####################################################
+#                   Шрифты                          #
+#####################################################
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+# choose your font
+font pango:Lato 13
+#font pango:Noto Mono Regular 13
+
+#####################################################
+#                  Контроль обводки                 #
+#####################################################
+
+# Border control
+hide_edge_borders both
+#bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+
+#changing border style
+#super+t in arcolinux is starting terminal
+#bindsym $mod+t border normal
+#bindsym $mod+y border 1pixel
+bindsym $mod+u border none
+
+
+#new_window pixel 1
+new_window normal
+#new_window none
+
+#new_float pixel 1
+new_float normal
+#new_float none
+
+#####################################################
+#                  picom of i3wm                    #
+#####################################################
+
+#if you want transparency on non-focused windows, ...
+#exec_always --no-startup-id picom
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+
+bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh

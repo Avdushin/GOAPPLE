@@ -27,9 +27,9 @@
 ## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## User Settings
 
-## [Set VPN commands]. Setup for Mullvad is done below.
-# The first three commands should have direct equivalents for most VPNs.
-# The relay_set command assumes <country_code> <city_code> will follow as arguments. See below.
+## [Set VPN coMainMenuands]. Setup for Mullvad is done below.
+# The first three coMainMenuands should have direct equivalents for most VPNs.
+# The relay_set coMainMenuand assumes <country_code> <city_code> will follow as arguments. See below.
 VPN_PROVIDER="Mullvad"
 VPN_CONNECT="mullvad connect"
 VPN_DISCONNECT="mullvad disconnect"
@@ -37,7 +37,7 @@ VPN_GET_STATUS="mullvad status"
 VPN_RELAY_SET_LOCATION="mullvad relay set location"
 
 ## [Set VPN status parsing]
-# The first command cuts the status, which is compared to keywords below.
+# The first coMainMenuand cuts the status, which is compared to keywords below.
 # Note from Julia: this should cover most VPNs, if it's missing something let me know
 VPN_STATUS="$($VPN_GET_STATUS | grep -Eio 'connected|connecting|disconnected' \
 	| tr '[:upper:]' '[:lower:]')"
@@ -50,7 +50,7 @@ COLOR_CONNECTING="#FFFF00"
 COLOR_DISCONNECTED="#FF3300"
 
 ## [Set 8 favorite VPN locations]
-# These are passed to your VPN as `$VPNCOMMAND_RELAY_SET_LOCATION <input>`.
+# These are passed to your VPN as `$VPNCOMainMenuAND_RELAY_SET_LOCATION <input>`.
 VPN_LOCATIONS=("us sea" "us chi" "us nyc" "us" "jp" "au" "fr" "br")
 
 ## [Set optional rofi menu style]. `man rofi` for help.

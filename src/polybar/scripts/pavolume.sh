@@ -183,7 +183,7 @@ case "$1" in
         volSync
         ;;
     --listen)
-        # Listen for changes and immediately create new output for the bar
+        # Listen for changes and iMainMenuediately create new output for the bar
         # This is faster than having the script on an interval
         listen
         ;;
