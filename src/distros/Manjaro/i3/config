@@ -1,0 +1,60 @@
+#####################################################
+#            ANANAZZ I3 CONFIGURATION               #
+#####################################################
+#                © 2023 ANANAZZ                     #
+#####################################################
+
+# KEY DEFINITIONS TO REMEMBER
+
+# $Mod = WINDOWS key or Super key or Mod4
+# Mod1 = ALT key
+# Control = CTRL key
+# Shift = SHIFT key
+# Escape = ESCAPE key
+# Return = ENTER or RETURN key
+# KP_Enter = Keypad Enter
+# Pause = PAUSE key
+# Print = PRINT key
+# Tab = TAB key
+
+#####################################################
+#       Назначение $mod преременных/клавиш          #
+#####################################################
+
+# Key to rule them all : Super(Windows) or Alt key?
+# Mod4 = Windows или Super на вашей клавиатуре
+# Mod1 = Alt на вашей клавиатуре
+
+# супер клавиша
+set $mod Mod4
+
+#клавиша Alt 
+#set $mod Mod1
+
+#####################################################
+#       reload changed configuration                #
+#####################################################
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# reload the configuration file
+bindsym $mod+Shift+c exec reload
+
+#~~~~ Includes ~~~~#
+# Autostart
+include $HOME/.config/i3/parts/autostart
+# Applications keybindings
+include $HOME/.config/i3/parts/keybindings
+# Workspaces
+include $HOME/.config/i3/parts/workspaces
+# Mooving
+include $HOME/.config/i3/parts/movement
+# tiling
+include $HOME/.config/i3/parts/tiling
+# windows management
+include $HOME/.config/i3/parts/windows
+# styles
+include $HOME/.config/i3/parts/style
+# sounds
+include $HOME/.config/i3/parts/sound

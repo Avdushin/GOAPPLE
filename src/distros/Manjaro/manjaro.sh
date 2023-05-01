@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\e[0;92mManjaro script starting..."
+echo -e "\e[0;92MainMenuanjaro script starting..."
 sudo pacman -Syyyuuu
 clear
 echo -e "\e[0;92mInstalling programs..."
@@ -10,8 +10,7 @@ sudo mkdir -p ~/.local/share/Trash/files
 echo -e "\e[0;92mInstalling programs..."
 sudo tar -C $HOME -xzf src/packages/NoiseTorch_x64.tgz
 sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo cp src/distros/Manjaro/config ~/.config/i3/
-sudo cp src/distros/Manjaro/picom.conf ~/.config/i3/
+sudo cp -rf src/distros/Manjaro/i3/* ~/.config/i3/
 sudo cp -r src/polybar/ ~/.config/  
 sudo cp -r src/kitty/ ~/.config/
 #sudo flatpak install flathub com.rafaelmardojai.Blanket -y 

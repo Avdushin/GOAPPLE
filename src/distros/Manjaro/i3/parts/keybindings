@@ -1,0 +1,106 @@
+#####################################################
+#                                                   #
+#       Define the movements keys - variables       #
+#       Запуск программ - сочитания клавиш          #
+#       скриншоты - flameshot                       #
+#                                                   #
+#####################################################
+
+
+#####################################################
+#       Define the movements keys - variables       #
+#####################################################
+
+# Qwerty setup
+set $up l
+set $down k
+set $left j
+set $right semicolon
+
+#####################################################
+#       Запуск программ - сочитания клавиш          #
+#####################################################
+
+# xbacklight - подсветка - laptops
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+
+# старт dmenu
+bindsym $mod+F2 exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+# старт rofi 
+bindsym $mod+d  exec --no-startup-id rofi -show run -font "Noto Sans 13"
+bindsym $mod+space  exec --no-startup-id rofi -show run -font "Noto Sans 13"
+
+# старт rofi полноэкранный
+bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
+
+# Sublime_text
+#bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text;Workspace 2
+bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
+#bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
+
+# vs code
+bindsym $mod+shift+v exec code
+
+# android studio
+bindsym $mod+shift+a exec sh ~/android-studio-2020.3.1.24-linux/android-studio/bin/studio.sh
+
+# blanket
+bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket;Workspace 9
+
+# gcolor
+bindsym $mod+g exec gcolor3;
+
+# nautilus
+bindsym $mod+e exec thunar
+
+# noisetorch
+bindsym $mod+n exec ~/.local/bin/noisetorch 
+
+# discord
+bindsym $mod+shift+d exec discord
+
+# firefox
+bindsym $mod+shift+f exec --no-startup-id firefox
+
+# google-chrome
+#bindsym $mod+shift+b exec google-chrome-stable
+
+# Brave browser
+bindsym $mod+shift+b exec brave
+
+# freetube
+#bindsym $mod+y exec freetube 
+
+# gitkraken
+bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
+
+# soundux
+bindsym $mod+shift+s exec flatpak run io.github.Soundux
+
+# terminal
+bindsym $mod+Return exec kitty -o background_opacity=0.8;focus
+#bindsym $mod+Return exec kitty;focus
+
+# telegram 
+bindsym $mod+t exec --no-startup-id telegram-desktop
+
+# teams
+bindsym $mod+shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
+
+#System monitor
+bindsym control+Shift+Escape exec --no-startup-id gnome-system-monitor;focus
+
+#catfish
+bindsym control+mod1+c exec --no-startup-id catfish;focus
+
+#xkill
+bindsym --release $mod+Escape exec xkill
+
+#####################################################
+#                   скриншоты                       #
+#####################################################
+
+bindsym Print exec --no-startup-id flameshot gui
