@@ -1,0 +1,2 @@
+sudo eopkg rm i3 i3blocks i3status i3-devel i3lock polybar kitty xkill fish ack variety feh flameshot rofi gcolor3 lxappearance picom bottom flatpak xdg-desktop-portal-gtk font-awesome-4 font-awesome-ttf -y
+sudo rm -rf ~/.config/i3/config ~/.config/polybar/ ~/.config/kitty/ ~/.config/variety/ ~/.appz/ ~/walls/ ~/.fonts/coins.otf ~/.fonts/coins.svg

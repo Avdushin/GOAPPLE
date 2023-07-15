@@ -1,42 +1,88 @@
-# GOAPPLE
+### GOAPPLE GUI
 
-<div align="center">
-	<img src="src/assets/mm.jpg">    
-</div>
+![](src/assets/demo/app.dark.png)![](src/assets/demo/app.light.png)
 
+GUI version of [GOAPPLE-CLI](https://github.com/Avdushin/GOAPPLE), written at Go Fyne.
 
-### GOAPPLE - Утилита для быстрой установки I3-wm.
+### Dependencies
 
-### SETUP
+`make`
 
-```text
-git clone https://github.com/Avdushin/GOAPPLE-CLI
-cd GOAPPLE-CLI
-sudo su
-./goapple
-# or start Russian language
-./goapple -ru
+```
+# to install make:
+
+# Manjaro
+sudo pacman -S make
+# Solus
+sudo eopkg it make
+# Fedora
+sudo dnf install make
 ```
 
-### DEMO
 
-![MainMenu](src/assets/mm.jpg)
 
-![dm](src/assets/new_dm.png)
+### How to install
 
-![myos](src/assets/myos.jpg)
+```
+git clone https://github.com/Avdushin/goapple-gui
+cd goapple-gui
+sudo make install
+# Click at the goapple-gui icon or 
+goapple-gui
+```
 
-![settings](src/assets/settings.jpg)
+or u can use
 
-### BSPWM DEMO
-[![BSPWM-DEMO](src/assets/bspwm_demo/demo_wick.png)](https://youtu.be/wwL68yPvc68)
+1) 
+  ```
+   git clone https://github.com/Avdushin/goapple-gui
+   cd goapple-gui
+   ./install.sh
+   ./goapple-gui
+   ```
+   
+2) 
+  ```
+   sudo make install
+   ./goapple-gui
+   ```
 
-### I3 DEMO
-![I3-DEMO](src/assets/i3-demo/fedora-i3-clear.jpg)
+### Usage
 
-![I3-DEMO-solus](src/assets/i3-demo/solus-i3.png) ![I3-DEMO-manjaro](src/assets/i3-demo/manjaro-i3.png) ![I3-DEMO-fedora](src/assets/i3-demo/fedora-i3.jpg)
+ * app's menu
 
-<p align="center">
-2023 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a>	<br/>
-Ananazz wallpapers by <a href="https://t.me/sm1rn0fskiy">Flouver1z</a> 
-</p>
+![app.empty](src/assets/demo/app.dark.png)
+
+* select  distro to install
+
+  ![app.distro.select](src/assets/demo/app.distro.select.png)
+
+#### menu
+
+* File -> about
+
+  Open Browser link about app
+
+  ![apps.file.about](src/assets/demo/apps.file.about.png)
+
+
+
+* Settings -> Themes ->
+
+  You can select app's theme dark/light
+
+![app.srttings.themes](src/assets/demo/app.srttings.themes.png)  ![app.light](src/assets/demo/app.light.png)
+
+* App running ->
+
+  When app is running - progress bar running! At this moment, application installing selected configuration
+
+  ![app.running](src/assets/demo/app.running.png)
+
+* Error (if you don't selected distro) ->
+
+  ![app.select.errors](src/assets/demo/app.select.errors.png)
+
+
+
+<p align="center">2022 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a></p>

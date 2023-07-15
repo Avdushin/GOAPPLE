@@ -1,4 +1,4 @@
 * linguist-vendored
 *.go linguist-vendored=false
-*.sh linguist-vendored=false
+*.sh linguist-vendored=true
 *.md linguist-vendored=false

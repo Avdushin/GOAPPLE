@@ -1,0 +1,14 @@
+2022/05/05: Version 1.0
+
+~ Menu:
+	- Added English and Russian languages
+	- Theme Switchers
+	- About Menu item
+~ Logic:
+	- Added language.txt configuration file for app's language control
+	
+	P.s "true" - English, "false" - Russian
+
+~ Apperiance: 
+	- Light & Dark themes
+	- Progressbar 

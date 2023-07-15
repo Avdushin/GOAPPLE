@@ -1,0 +1,64 @@
+
+window:
+    opacity: 0.7
+    padding:
+      x: 10
+      y: 5
+
+scrolling:
+  history: 5000
+
+font:
+  normal:
+    family: Operator Mono
+    style: Regular
+
+  bold:
+    family: Operator Mono
+    style: Bold
+
+  italic:
+    family: Operator Mono
+    style: Italic
+
+  bold_italic:
+    family: Operator Mono
+    style: Bold Italic
+  size: 13
+
+cursor:
+  style: Beam
+
+# Colors (Nord)
+
+colors:
+  # Default colors
+  primary:
+    background: '#2b313c'
+    foreground: '0xD8DEE9'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '0xBF616A'
+    green:   '#19cb00'
+    yellow:  '#cecb00'
+    blue:    '#0d73cc'
+    magenta: '0xB48EAD'
+    cyan:    '#0dcdcd'
+    white:   '#dddddd'
+
+  # Bright colors
+  bright:
+    black:   '#767676'
+    red:     '0xBF616A'
+    green:   '#19cb00'
+    yellow:  '0xEBCB8B'
+    blue:    '#2191f2'
+    magenta: '0xB48EAD'
+    cyan:    '#0dcdcd'
+    white:   '#ffffff'
+
+  cursor:
+    text:   '#2c2c2c'
+    cursor: '#B77C16'
