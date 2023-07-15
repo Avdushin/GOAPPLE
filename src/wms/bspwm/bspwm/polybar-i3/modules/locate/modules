@@ -1,0 +1,7 @@
+########################
+# РАСПОЛОЖЕНИЕ МОДУЛЕЙ #
+########################
+
+modules-left   =  i3 sep xwindow
+modules-center =  youtube vk github weblancer figma miro steam
+modules-right  =  cpu2 memory3 volume5 is-vpn updates-pacman date xkeyboard2 uptime variety trash powermenu

@@ -1,0 +1,25 @@
+#####################
+# Polybar  Settings #
+#####################
+
+[settings]
+;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
+throttle-output = 15
+throttle-output-for = 10
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+; Define fallback values used by all module formats
+format-foreground = #FF0000
+format-background = #00FF00
+;format-underline = #40AD4B
+format-underline = #3EC13F
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =

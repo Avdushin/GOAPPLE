@@ -1,0 +1,12 @@
+########
+# Tray #
+########
+#tray-detached = false
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-padding = 2
+#tray-radius = 20
+#tray-maxsize = 20
+#tray-scale = 1.0
+#tray-position = right
+#tray-background = ${colors.background}

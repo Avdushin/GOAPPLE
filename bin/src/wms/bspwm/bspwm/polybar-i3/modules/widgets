@@ -1,0 +1,70 @@
+#################################################
+#                Widgets Modules                #
+#################################################
+
+# Power menu widget
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+
+menu-0-0 = " Reboot |"
+menu-0-0-exec = menu-open-1
+menu-0-1 = " Shutdown "
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = " Back |"
+menu-1-0-exec = menu-open-0
+menu-1-1 = " Reboot "
+menu-1-1-exec = systemctl reboot
+
+menu-2-0 = " Shutdown |"
+menu-2-0-exec = systemctl poweroff
+menu-2-1 = " Back "
+menu-2-1-exec = menu-open-0
+
+format = <label-toggle><menu>
+
+label-open = 
+label-open-foreground = 
+label-open-padding = 1
+label-close = 
+label-close-foreground = 
+label-close-padding = 1
+; 
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+; Optional item separator
+; Default: none
+;label-separator = " | "
+;label-separator-foreground = 
+;label-separator-background = 
+
+;;label-open-foreground = 
+;;label-close-foreground = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+# Weather widget
+[module/weather]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = " "
+format-prefix-foreground = #3EC13F
+format-underline = #3EC13F
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+exec = python -u ~/.config/polybar/scripts/weather.py
+tail = true
+
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/scripts/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-underline = #6C6565

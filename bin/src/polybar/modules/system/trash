@@ -1,0 +1,18 @@
+#################################################
+#                 Trash Modules                 #
+#################################################
+
+[module/trash]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/trash
+format-prefix = "  "
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = rm -rf ~/.local/share/Trash/files/* ;exec notify-send 'Корзина очищена'
+#click-right = pcmanfm -n ~/.local/share/Trash/files
+format-background = 
+format-underline = #FF7676

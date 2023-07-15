@@ -1,2 +1,0 @@
-sudo dnf remove i3 i3blocks i3status i3-gaps i3lock polybar kitty fish ack bottom flameshot variety feh rofi picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y --allowerasing
-sudo rm -rf ~/.config/i3/config ~/.config/polybar/ ~/.config/kitty/ ~/.config/variety/ ~/.appz/ ~/walls/ ~/.fonts/coins.otf ~/.fonts/coins.svg

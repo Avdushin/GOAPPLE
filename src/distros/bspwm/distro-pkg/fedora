@@ -1,0 +1,26 @@
+https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
+https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+bspwm
+sxhkd
+polybar
+kitty
+krita
+fish
+git
+ack
+vim
+bottom
+neofetch
+flameshot
+variety
+feh
+rofi
+discord
+steam
+telegram-desktop
+picom
+gcolor3
+lxappearance
+flatpak
+xdg-desktop-portal-gtk
+fontawesome-fonts

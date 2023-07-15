@@ -1,0 +1,34 @@
+#################################################
+#                 Advanced Modules              #
+#################################################
+
+[module/sep]
+; alternative separator
+type = custom/text
+content = |
+;content = 
+content-foreground = ${colors.foreground}
+content-background =  ${colors.background}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-underline =
+content-underline =
+
+[module/crypto]
+type = custom/script
+exec = ~/.config/polybar/scripts/pcrypto.py --base USD --coins btc eth xmr xrp 
+interval = 1
+
+;format-prefix = ""
+;format-prefix-foreground = #FFBB00
+;format-foreground = #FFFFF0
+format-foreground = ${colors.foreground}
+format-background =
+format-underline = #FFBB00
+
+[module/yt]
+type = custom/script
+interval = 1800
+format-prefix = "  "
+format = <label>
+exec = ~/.config/polybar/scripts/sub.py

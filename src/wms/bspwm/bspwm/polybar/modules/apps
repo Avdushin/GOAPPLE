@@ -1,0 +1,172 @@
+#####################
+#   Module - Links  #
+#####################
+
+[module/miro]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://miro.com/app/board/uXjVOYswI1Q=/
+format-background = 
+format-underline = 
+;#c89148
+
+[module/github]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://github.com/
+format-background = 
+format-underline = 
+;#c89148
+
+[module/vk]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://vk.com/feed
+format-background = 
+format-underline = 
+;#c89148
+
+[module/youtube]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://youtube.com/
+format-background = 
+format-underline = 
+;#c89148
+
+[module/figma]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://www.figma.com/files/
+format-background = 
+format-underline = 
+
+[module/steam]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+; 
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = exec steam &
+click-right = killall steam &
+format-background = 
+format-underline =
+
+[module/terminal]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = exec kitty &
+format-background = 
+format-underline = 
+
+[module/browser]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = exec brave &
+click-right = exec firefox &
+format-background = 
+format-underline = 
+
+[module/discord]
+type = custom/script
+exec = echo " Discord "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+format-underline = #738adb
+click-left = discord &
+click-right = killall Discord && killall Discord
+format-prefix = ""
+
+[module/ds]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+;   ⅅ
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = exec discord &
+click-right = killall discord 
+format-background = 
+format-underline = 
+
+[module/tg]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = exec telegram-desktop &
+format-background = 
+format-underline = 
+
+[module/weblancer]
+type = custom/script
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+;  
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = brave https://www.weblancer.net/ &
+format-background = 
+format-underline = 
+
+################################################
