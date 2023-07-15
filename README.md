@@ -34,7 +34,7 @@ goapple
 
 ### GOAPPLE-CLI
 
-[SOURCE CODE](https://github.com/Avdushin/GOAPPLE-CLI/) 
+[SOURCE CODE](https://github.com/Avdushin/GOAPPLE/tree/cli) 
 
 ![mm](src/assets/mm.jpg)
 
@@ -46,7 +46,7 @@ goapple
 
 ### GOAPPLE-GUI
 
-[SOURCE CODE](https://github.com/Avdushin/GOAPPLE-GUI)
+[SOURCE CODE](https://github.com/Avdushin/GOAPPLE/tree/gui)
 
  * app's menu
 
